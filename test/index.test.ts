@@ -1,11 +1,20 @@
 import { expect, test, describe, it, expectTypeOf } from 'vitest';
-import Index from '～/pages/index';
+import { render } from '@testing-library/vue'
+import Index from '@/views/index/index.vue';
 
-describe('/pages/index', () => {
-  test('看看有没有覆盖率', () => {
-    expectTypeOf(Index).toBeFunction();
+describe('/src/views/index', () => {
+  it('看看覆盖率', () => {
+    const {getByText} = render(Index, {
+      props: {
+        text: 'hello world'
+      }
+    })
+    
+    console.log('getByText', getByText)
+    getByText('hello')
   });
-  test('来看一下', () => {
-    expect(1 + 1).toBe(3);
+  it('来看一下', () => {
+    expect(1 + 1).toBe(2);
   });
 });
+

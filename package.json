@@ -5,16 +5,24 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
+    "dev": "vite",
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:run": "vitest run",
     "test:coverage": "vitest run --coverage"
   },
   "devDependencies": {
+    "@testing-library/vue": "^6.6.1",
+    "@types/node": "^18.13.0",
+    "@vitejs/plugin-vue": "^4.0.0",
     "@vitest/coverage-c8": "^0.28.4",
+    "@vitest/coverage-istanbul": "^0.28.4",
     "@vitest/ui": "latest",
+    "happy-dom": "^8.2.6",
     "vite": "latest",
-    "vitest": "latest"
+    "vitest": "^0.28.4",
+    "vue": "^3.2.47",
+    "vue-router": "^4.1.6"
   },
   "stackblitz": {
     "startCommand": "npm run test:ui"
